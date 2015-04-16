@@ -1,6 +1,7 @@
 /* 
    Reciclar Game v1.0 (beta)
    Autor: Alex Ishida
+   https://github.com/alexishida
  */
 
 /* Constantes*/
