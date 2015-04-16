@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>Reciclar Game v1.0 - Criado por Alex Ishida</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0.4,user-scalable=no">
+        <meta name="description" content="Jogo educativo sobre reciclagem">
+        <meta name="keywords" content="Game,Educativo,Reciclar,Educacional">
+        <meta name="author" content="Alex Ishida">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="assets/css/estilo.css" />
+    </head>
+    <body>
+        <div id="topo" class="esconder">
+            <div id="placar_reciclagem"><p>0</p></div>
+            <div id="placar_melhor"><p>0</p></div>
+            <div id="placar_tempo"><p>30</p></div>
+            
+        </div>
+        <div id="principal">
+
+            <div id="mensagem_inicio" class="box">
+                
+                <div class="mensagem_texto">
+                    <h1>RECICLAR GAME</h1>
+                    <p>Aliquam molestie porttitor massa dignissim pretium. Aliquam sit amet nisl sit amet ante placerat gravida sed mattis velit. Nam quam nunc, tempus sed lorem at, malesuada dictum orci. Maecenas laoreet purus mi, quis mollis dolor dapibus id. Quisque tortor odio, varius ac arcu ut, cursus pharetra nisi. Duis eu auctor odio, dapibus facilisis libero. Pellentesque non egestas ipsum. Etiam blandit eros at urna lacinia rhoncus. Vivamus vestibulum eget nibh et convallis. Nam ornare at nibh id blandit. Integer sodales elit nec tortor rhoncus mattis. Donec non commodo diam, vel sollicitudin urna. </p>
+                    <p class="criado_por">Criado por <a href="mailto:alexishida@gmail.com">Alex Ishida</a></p>
+                </div>
+                
+                <a href="javascript:void(0);" onclick="javascript:iniciaPreparacao();" class="btn btn_animado btn_verde btn_iniciar">Jogar</a>
+                
+            </div>
+            
+            
+            <div id="preparar" class="box esconder"></div>
+            
+            
+            <div id="mensagem_fim" class="box esconder">
+                
+                <div class="mensagem_texto">
+                    <h1>Fim do Jogo</h1>
+                    <p>Aliquam molestie porttitor massa dignissim pretium. Aliquam sit amet nisl sit amet ante placerat gravida sed mattis velit. Nam quam nunc, tempus sed lorem at, malesuada dictum orci. Maecenas laoreet purus mi, quis mollis dolor dapibus id. Quisque tortor odio, varius ac arcu ut, cursus pharetra nisi. Duis eu auctor odio, dapibus facilisis libero. Pellentesque non egestas ipsum. Etiam blandit eros at urna lacinia rhoncus. Vivamus vestibulum eget nibh et convallis. Nam ornare at nibh id blandit. Integer sodales elit nec tortor rhoncus mattis. Donec non commodo diam, vel sollicitudin urna. </p>
+                    <p class="criado_por">Criado por <a href="mailto:alexishida@gmail.com">Alex Ishida</a></p>
+                </div>
+                
+                <a href="javascript:void(0);" onclick="javascript:iniciaPreparacao();" class="btn btn_animado btn_verde btn_iniciar">Jogar Novamente</a>
+                
+            </div>
+            
+ 
+            
+            <div id="jogo" class="esconder">
+                <div id="lixeiras">
+                    <div data-tipo-lixo="papel" class="lixeira lixeira_papel"></div>
+                    <div data-tipo-lixo="plastico" class="lixeira lixeira_plastico"></div>
+                    <div data-tipo-lixo="vidro" class="lixeira lixeira_vidro"></div>
+                    <div data-tipo-lixo="metal" class="lixeira lixeira_metal"></div>
+                    <div data-tipo-lixo="organico" class="lixeira lixeira_organico"></div>
+                </div>
+
+                <div class="clear"></div>
+
+                <div id="lixos"></div>
+            </div>
+            
+            <div id="pre_load" class="esconder">
+                <img src="assets/img/lixeiras.png">
+                <img src="assets/img/lixo.png">
+                <img src="assets/img/placar-melhor.png">
+                <img src="assets/img/placar-reciclagem.png">
+                <img src="assets/img/placar-tempo.png">
+            </div>
+        </div>
+
+
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/jquery-ui.min.js"></script>
+        <script src="assets/js/jquery.ui.touch-punch.min.js"></script>
+        <script src="assets/js/reciclar.js"></script>
+        
+        <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-18956365-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+        
+    </body>
+</html>

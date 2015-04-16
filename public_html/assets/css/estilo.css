@@ -1,0 +1,293 @@
+/* 
+   Reciclar Game v1.0 (beta)
+   Autor: Alex Ishida
+ */
+
+/* Fonts */
+@font-face {
+    font-family: 'BigBottomCartoonRegular';
+    src: url('../fonts/BigBottomCartoonRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/* CSS RESET */
+* {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+body {
+    // font-family: "Helvetica Neue",​Helvetica,​Arial,​sans-serif;
+    background: url('../img/fundo.jpg') repeat-x;
+    background-color: #8F8C84;
+    font-family: 'BigBottomCartoonRegular';
+    font-weight: normal;
+    font-style: normal; 
+    overflow: hidden;
+}
+
+.clear {
+    clear: both;  
+}
+
+.esconder {
+    display: none !important;
+}
+
+.mostrar {
+    display: block !important;
+}
+.box {
+     background-color: #F8D158;
+    border: 10px solid #E39531;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+#mensagem_inicio {
+    width: 700px;
+    height: 520px;
+   
+}
+
+#preparar{
+    width: 220px;
+    padding: 20px;
+}
+#preparar h1{
+   font-size: 50px;
+   text-align: center;
+}
+
+
+#mensagem_fim {
+    width: 700px;
+    height: 520px;
+    background-color: #F8D158;
+    border: 10px solid #E39531;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.mensagem_texto {
+    padding: 20px;
+    padding-top: 10px;
+}
+.mensagem_texto p {
+    line-height: 25px;
+    font-weight: normal;
+}
+
+.criado_por {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.criado_por a {
+    color: red;
+}
+
+.btn_iniciar {
+    margin-left: 260px !important;
+}
+
+#topo {
+    width: 840px;
+    overflow: auto;
+    margin: 0 auto;
+    padding-top: 15px;
+    //background-color: #ffffff;
+}
+
+#placar_reciclagem {
+    width: 209px;
+    height: 61px;
+    float: left;
+    margin-right: 50px;
+    background: url('../img/placar-reciclagem.png') no-repeat;
+}
+
+#placar_reciclagem p {
+    margin-right: 20px;
+    margin-top: 6px;
+    font-size: 20px;
+    text-align: right;
+}
+
+#placar_melhor {
+    width: 209px;
+    height: 61px;
+    float: left;
+    background: url('../img/placar-melhor.png') no-repeat;
+}
+
+#placar_melhor p {
+    margin-right: 16px;
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: right;
+}
+
+#placar_tempo {
+    width: 170px;
+    height: 60px;
+    float: right;
+    background: url('../img/placar-tempo.png') no-repeat;
+}
+
+#placar_tempo p {
+    color: red;
+    margin-right: 15px;
+    margin-top: 5px;
+    font-size: 20px;
+    text-align: right;
+}
+
+
+#principal {
+    width: 840px;
+    min-height: 100px;
+    margin: 0 auto;
+    padding-top: 15px;
+    overflow: visible;
+}
+
+#lixeiras {
+    width: 780px;
+    padding-left: 13px;
+    display: block;
+    overflow: hidden;    
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.lixeira {
+    width: 140px;
+    height: 232px;
+    margin-right: 13px;
+    float: left;
+    background: url('../img/lixeiras.png') no-repeat;
+}
+.lixeira_selecionada {
+    -webkit-transform:scale(1.03); 
+    -moz-transform:scale(1.03);   
+    -o-transform:scale(1.03); 
+    transform:scale(1.03); 
+}
+
+.lixeira_papel {
+    background-position: 0 0;
+}
+.lixeira_plastico {
+    background-position: -140px 0;
+}
+.lixeira_vidro {
+    background-position: -282px 0;
+}
+.lixeira_metal {
+    background-position: -420px 0;
+}
+.lixeira_organico {
+    background-position: -560px 0;
+}
+
+#lixos {
+    width: 840px;
+    height: 250px;
+    margin-top: 20px;
+    position: relative;
+    overflow: visible;
+}
+
+.lixo {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background: url('../img/lixo.png') no-repeat;
+}
+.lixo_metal {
+      background-position: 0 0;
+}
+.lixo_papel {
+   background-position: -150px 0;
+}
+.lixo_vidro {
+   background-position: -300px 0;
+}
+.lixo_organico {
+    background-position: -450px 0;
+}
+.lixo_plastico {
+     background-position: -600px 0;
+}
+
+
+
+
+
+/* CSS de Botões */
+
+.btn_animado
+{
+    transition: all 0.1s;
+    -webkit-transition: all 0.1s;
+}
+
+.btn
+{
+    position: relative;
+    padding: 10px 40px;
+    margin: 0px 10px 10px 0px;
+    float: left;
+    border-radius: 10px;
+
+    font-size: 25px;
+    color: #FFF;
+    text-decoration: none;	
+}
+
+.btn_azul
+{
+    background-color: #3498DB;
+    border-bottom: 5px solid #2980B9;
+    text-shadow: 0px -2px #2980B9;
+}
+
+.btn_vermelho
+{
+    background-color: #E74C3C;
+    border-bottom: 5px solid #BD3E31;
+    text-shadow: 0px -2px #BD3E31;
+}
+
+.btn_verde
+{
+    background-color: #82BF56;
+    border-bottom: 5px solid #669644;
+    text-shadow: 0px -2px #669644;
+}
+
+.btn_amarelo
+{
+    background-color: #F2CF66;
+    border-bottom: 5px solid #D1B358;
+    text-shadow: 0px -2px #D1B358;
+}
+
+.btn:active
+{
+    transform: translate(0px,5px);
+    -webkit-transform: translate(0px,5px);
+    border-bottom: 1px solid;
+}
