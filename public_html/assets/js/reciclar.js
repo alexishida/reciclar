@@ -1,6 +1,7 @@
 /* 
    Reciclar Game v1.0 (beta)
    Autor: Alex Ishida
+   Autor 2: Celso Yoshikazu Ishida
    https://github.com/alexishida
  */
 
@@ -149,14 +150,12 @@ function changeViewportMeta() {
 }
 
 
-
-
 function geraLixo() {
     total_lixos_gerados++;
     var id_lixo = 'lixo-' + total_lixos_gerados;
-	var valor = valorAleatorio();
-    var tipo_lixo = tipoLixo(valor);
-    var dados = '<div id="' + id_lixo + '" data-tipo-lixo="' + tipo_lixo + '" class="lixo lixo_' + valor + '"></div>';
+    var tipo_lixo = tipoLixo( );
+    var valor = valorAleatorioLixo();
+    var dados = '<div id="' + id_lixo + '" data-tipo-lixo="' + tipo_lixo + '" class="lixo_' + tipo_lixo + ' lixo_' + valor + '">' 	+ '</div>';
     $('#lixos').html(dados);
     posicaoAleatoria(id_lixo);
     $('#' + id_lixo).draggable({
@@ -178,8 +177,8 @@ function posicaoAleatoria(id) {
     $('#' + id).css('top', top);
 }
 
-function valorAleatorio() {
-	return Math.floor(Math.random() * 10)+1; // 11 = número de lixos em lixo.png
+function valorAleatorioLixo() {
+	return Math.floor(Math.random() * 10)+1; // 11 = número de lixos em lixo_.png
 }
 function tipoLixo(valor) {
     var tipo_lixo = [
@@ -188,17 +187,10 @@ function tipoLixo(valor) {
         "vidro",
         "organico",
         "plastico",
-		
-        "plastico",
-        "organico",
-        "plastico",
-        "plastico",
-        "metal",
-		
-        "organico"];
-
-    return tipo_lixo[valor-1];
+        "naoreciclavel"];
+    return tipo_lixo[Math.floor(Math.random() * (6-1+1))];
 }
+
 
 function removeLixo() {
     $(".lixo").draggable("destroy");

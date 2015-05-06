@@ -165,7 +165,7 @@ body {
 }
 
 #lixeiras {
-    width: 780px;
+    width: 920px;
     padding-left: 13px;
     display: block;
     overflow: hidden;    
@@ -202,6 +202,9 @@ body {
 .lixeira_organico {
     background-position: -560px 0;
 }
+.lixeira_naoreciclavel {
+    background-position: -700px 0;
+}
 
 #lixos {
     width: 840px;
@@ -211,11 +214,41 @@ body {
     overflow: visible;
 }
 
-.lixo {
+.lixo_metal {
     width: 150px;
     height: 150px;
     position: absolute;
-    background: url('../img/lixo.png') no-repeat;
+    background: url('../img/lixometal.png') no-repeat;
+}
+.lixo_papel {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background: url('../img/lixopapel.png') no-repeat;
+}
+.lixo_naoreciclavel {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background: url('../img/lixonaoreciclavel.png') no-repeat;
+}
+.lixo_plastico {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background: url('../img/lixoplastico.png') no-repeat;
+}
+.lixo_vidro {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background: url('../img/lixovidro.png') no-repeat;
+}
+.lixo_organico {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background: url('../img/lixoorganico.png') no-repeat;
 }
 .lixo_1 {
       background-position: 0 0;
@@ -250,9 +283,6 @@ body {
 .lixo_11 {
      background-position: -1500px 0;
 }
-
-
-
 
 
 /* CSS de Botões */

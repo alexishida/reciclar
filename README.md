@@ -7,7 +7,7 @@ This version example
 http://www.cedsmi.ufpr.br/reciclar/
 
 Licence
-=======
+Apache
 
 Images
 http://www.freepik.com/
