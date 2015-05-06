@@ -165,7 +165,7 @@ body {
 }
 
 #lixeiras {
-    width: 780px;
+    width: 920px;
     padding-left: 13px;
     display: block;
     overflow: hidden;    
@@ -202,6 +202,9 @@ body {
 .lixeira_organico {
     background-position: -560px 0;
 }
+.lixeira_naoreciclavel {
+    background-position: -700px 0;
+}
 
 #lixos {
     width: 840px;
@@ -211,30 +214,75 @@ body {
     overflow: visible;
 }
 
-.lixo {
+.lixo_metal {
     width: 150px;
     height: 150px;
     position: absolute;
-    background: url('../img/lixo.png') no-repeat;
-}
-.lixo_metal {
-      background-position: 0 0;
+    background: url('../img/lixometal.png') no-repeat;
 }
 .lixo_papel {
-   background-position: -150px 0;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background: url('../img/lixopapel.png') no-repeat;
 }
-.lixo_vidro {
-   background-position: -300px 0;
-}
-.lixo_organico {
-    background-position: -450px 0;
+.lixo_naoreciclavel {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background: url('../img/lixonaoreciclavel.png') no-repeat;
 }
 .lixo_plastico {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background: url('../img/lixoplastico.png') no-repeat;
+}
+.lixo_vidro {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background: url('../img/lixovidro.png') no-repeat;
+}
+.lixo_organico {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    background: url('../img/lixoorganico.png') no-repeat;
+}
+.lixo_1 {
+      background-position: 0 0;
+}
+.lixo_2 {
+   background-position: -150px 0;
+}
+.lixo_3 {
+   background-position: -300px 0;
+}
+.lixo_4 {
+    background-position: -450px 0;
+}
+.lixo_5 {
      background-position: -600px 0;
 }
-
-
-
+.lixo_6 {
+      background-position: -750px 0;
+}
+.lixo_7 {
+   background-position: -900px 0;
+}
+.lixo_8 {
+   background-position: -1050px 0;
+}
+.lixo_9 {
+    background-position: -1200px 0;
+}
+.lixo_10 {
+     background-position: -1350px 0;
+}
+.lixo_11 {
+     background-position: -1500px 0;
+}
 
 
 /* CSS de Botões */

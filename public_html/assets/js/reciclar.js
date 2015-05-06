@@ -1,19 +1,21 @@
 /* 
    Reciclar Game v1.0 (beta)
    Autor: Alex Ishida
+   Autor 2: Celso Yoshikazu Ishida
    https://github.com/alexishida
  */
 
 /* Constantes*/
-var tempo = 30;
-var tempo_preparar = 3;
+var tempo = 100;
+var tempo_preparar = 1;
 
 /* Variaveis */
 var pontuacao = 0;
 var maior_pontuacao = 0;
 var total_lixos_gerados = 0;
 var tempo_restante = 0;
-
+var aplauso = new Audio('assets/mp3/applause2.mp3');
+var jogar = new Audio('assets/mp3/missing_arrow.wav');
 
 var thread_tempo;
 
@@ -111,6 +113,7 @@ function fimJogo() {
         maior_pontuacao = pontuacao;
         $("#placar_melhor").html("<p>" + maior_pontuacao + "</p>");
     }
+	aplauso.play();
 
     $('#mensagem_fim').removeClass('esconder');
     $('#jogo').addClass('esconder');
@@ -147,13 +150,12 @@ function changeViewportMeta() {
 }
 
 
-
-
 function geraLixo() {
     total_lixos_gerados++;
     var id_lixo = 'lixo-' + total_lixos_gerados;
-    var tipo_lixo = lixoAleatorio();
-    var dados = '<div id="' + id_lixo + '" data-tipo-lixo="' + tipo_lixo + '" class="lixo lixo_' + tipo_lixo + '"></div>';
+    var tipo_lixo = tipoLixo( );
+    var valor = valorAleatorioLixo();
+    var dados = '<div id="' + id_lixo + '" data-tipo-lixo="' + tipo_lixo + '" class="lixo_' + tipo_lixo + ' lixo_' + valor + '">' 	+ '</div>';
     $('#lixos').html(dados);
     posicaoAleatoria(id_lixo);
     $('#' + id_lixo).draggable({
@@ -175,18 +177,18 @@ function posicaoAleatoria(id) {
     $('#' + id).css('top', top);
 }
 
-
-function lixoAleatorio() {
-    var valor = Math.floor(Math.random() * (4 - 0 + 1)) + 0;
-
+function valorAleatorioLixo() {
+	return Math.floor(Math.random() * 10)+1; // 11 = número de lixos em lixo_.png
+}
+function tipoLixo(valor) {
     var tipo_lixo = [
-        "papel",
-        "plastico",
-        "vidro",
         "metal",
-        "organico"];
-
-    return tipo_lixo[valor];
+        "papel",
+        "vidro",
+        "organico",
+        "plastico",
+        "naoreciclavel"];
+    return tipo_lixo[Math.floor(Math.random() * (6-1+1))];
 }
 
 
@@ -203,16 +205,27 @@ function acertouLixo(event, ui) {
 
     // Verifica se é o lixo correto
     if ($(this).hasClass(classe_busca)) {
+		if (((pontuacao+5) % 100) < 5)
+			aplauso.play();
+		else
+			jogar.play();
         somaPontuacao();
         removeLixo();
         geraLixo();
-    }
+    } else {
+		diminuiPontuacao();
+	}
 
 }
 
 
 function somaPontuacao() {
-    pontuacao++;
+    pontuacao+=5;
+    $("#placar_reciclagem").html("<p>" + pontuacao + "</p>");
+}
+
+function diminuiPontuacao() {
+    pontuacao-=1;
     $("#placar_reciclagem").html("<p>" + pontuacao + "</p>");
 }
 
